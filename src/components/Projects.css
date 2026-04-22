@@ -1,0 +1,172 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 1.35rem;
+}
+
+/* Filter bar */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+.filter-btn {
+    padding: 0.4rem 1rem;
+    border-radius: var(--radius-full);
+    background: rgba(255,255,255,0.04);
+    border: var(--glass-border);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.22s;
+}
+.filter-btn:hover { background: rgba(124,92,252,0.1); border-color: rgba(124,92,252,0.3); color: var(--text-primary); }
+.filter-btn.active { background: var(--grad-primary); border-color: transparent; color: #fff; font-weight: 600; }
+
+/* Card */
+.proj-card {
+    padding: 1.6rem !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md) !important;
+}
+.proj-card.featured {
+    background: linear-gradient(135deg, rgba(124,92,252,0.07), rgba(0,212,255,0.04)) !important;
+    border-color: rgba(124,92,252,0.18) !important;
+}
+.proj-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--grad-primary);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.proj-card:hover::before { opacity: 1; }
+
+/* Award ribbon */
+.award-ribbon {
+    position: absolute;
+    top: 0; right: 0;
+    padding: 0.25rem 0.75rem;
+    background: var(--grad-secondary);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+/* Top row */
+.proj-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.proj-category {
+    padding: 0.22rem 0.7rem;
+    border-radius: var(--radius-full);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.proj-github-link {
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.05);
+    border: var(--glass-border);
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.22s;
+}
+.proj-github-link:hover { background: rgba(124,92,252,0.18); border-color: var(--purple); color: var(--purple); }
+
+/* Title & description */
+.proj-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+}
+.proj-oneliner {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+}
+
+/* Highlight */
+.proj-highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.8rem;
+    color: var(--cyan);
+    font-family: var(--font-mono);
+    margin-bottom: 0.85rem;
+    padding: 0.35rem 0.75rem;
+    background: rgba(0,212,255,0.07);
+    border: 1px solid rgba(0,212,255,0.18);
+    border-radius: var(--radius-sm);
+    width: fit-content;
+}
+.highlight-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--cyan);
+    flex-shrink: 0;
+}
+
+/* Points */
+.proj-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    flex: 1;
+}
+.proj-points li {
+    font-size: 0.835rem;
+    color: var(--text-secondary);
+    padding-left: 1.1rem;
+    position: relative;
+    line-height: 1.6;
+}
+.proj-points li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-size: 0.75rem;
+    top: 1px;
+}
+
+/* Tech stack */
+.proj-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+}
+
+/* Toggle */
+.proj-toggle {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .proj-card { padding: 1.35rem !important; }
+}

@@ -1,0 +1,76 @@
+.timeline {
+    position: relative;
+    max-width: 780px;
+    margin: 0 auto;
+    padding-left: 2rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 9px; top: 8px; bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--purple), transparent);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 8px;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--grad-primary);
+    border: 2px solid var(--bg-primary);
+    box-shadow: 0 0 14px rgba(124,92,252,0.55);
+    z-index: 1;
+}
+.timeline-card {
+    padding: 1.75rem !important;
+    border-radius: var(--radius-md) !important;
+    transition: transform var(--transition), box-shadow var(--transition), border var(--transition) !important;
+}
+.timeline-card:hover { transform: translateX(6px) translateY(-3px) !important; }
+
+.exp-role {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+.exp-company {
+    font-size: 0.95rem;
+    color: var(--purple);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+.exp-meta {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 1.1rem;
+    flex-wrap: wrap;
+}
+.exp-points {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+.exp-points li {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.65;
+}
+.exp-points li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--purple);
+    font-size: 0.75rem;
+    top: 3px;
+}

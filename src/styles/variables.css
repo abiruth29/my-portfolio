@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+    /* Backgrounds */
+    --bg-primary: #06060f;
+    --bg-secondary: #0c0c1e;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --bg-card-hover: rgba(255, 255, 255, 0.065);
+
+    /* Text */
+    --text-primary: #eeeef5;
+    --text-secondary: #9090b0;
+    --text-muted: #5a5a7a;
+
+    /* Accents */
+    --purple: #7C5CFC;
+    --cyan: #00D4FF;
+    --pink: #FF4ECD;
+    --green: #00FFA3;
+    --amber: #FFB347;
+
+    /* Gradients */
+    --grad-primary: linear-gradient(135deg, #7C5CFC, #00D4FF);
+    --grad-secondary: linear-gradient(135deg, #FF4ECD, #7C5CFC);
+    --grad-text: linear-gradient(135deg, #fff 0%, #9090b0 100%);
+
+    /* Glass */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.07);
+    --glass-border-hover: 1px solid rgba(124, 92, 252, 0.35);
+    --glass-bg: rgba(12, 12, 30, 0.7);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --glass-shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(124,92,252,0.15);
+
+    /* Typography */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Fira Code', 'Cascadia Code', monospace;
+
+    /* Layout */
+    --container-width: 1140px;
+    --header-height: 72px;
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-full: 999px;
+
+    /* Transitions */
+    --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --transition: 0.3s var(--ease);
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan); }
