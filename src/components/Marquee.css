@@ -1,0 +1,50 @@
+.marquee-root {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(124,92,252,0.025);
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.marquee-track {
+    display: flex;
+    white-space: nowrap;
+    gap: 0;
+    animation: marquee-scroll 28s linear infinite;
+    margin-bottom: 0.6rem;
+}
+.marquee-track--rev {
+    animation-direction: reverse;
+    animation-duration: 34s;
+}
+
+.marquee-item {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.22);
+    padding: 0 0.5rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+}
+.marquee-item:hover { color: var(--purple); }
+
+.marquee-sep {
+    margin: 0 1.2rem;
+    color: rgba(124,92,252,0.3);
+    font-size: 1em;
+}
+
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
