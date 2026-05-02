@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resume';
 import Section from './Section';
+import SectionHeader from './SectionHeader';
 import './About.css';
 
 const STATS = [
@@ -17,11 +18,7 @@ const About = () => {
 
     return (
         <Section id="about">
-            <div className="section-header">
-                <span className="section-label">// 01. about</span>
-                <h2 className="section-title">Who I <span className="accent">Am</span></h2>
-                <div className="section-divider" />
-            </div>
+            <SectionHeader label="// 01. about" title="Who I" accent="Am" />
 
             <div className="about-layout">
                 {/* Left */}

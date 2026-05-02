@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from './Section';
 import { resumeData } from '../data/resume';
+import SectionHeader from './SectionHeader';
 import './Contact.css';
 
 const LINKS = [
@@ -21,11 +22,7 @@ const LINKS = [
 
 const Contact = () => (
     <Section id="contact">
-        <div className="section-header">
-            <span className="section-label">// 06. contact</span>
-            <h2 className="section-title">Let's <span className="accent">Connect</span></h2>
-            <div className="section-divider" />
-        </div>
+        <SectionHeader label="// 06. contact" title="Let's" accent="Connect" />
 
         <div className="contact-wrapper">
             <motion.p className="contact-desc" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>

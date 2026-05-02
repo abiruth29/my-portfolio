@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resume';
 import Section from './Section';
+import SectionHeader from './SectionHeader';
 import './Achievements.css';
 
 const Achievements = () => {
@@ -9,11 +10,7 @@ const Achievements = () => {
 
     return (
         <Section id="achievements">
-            <div className="section-header">
-                <span className="section-label">// 05. achievements</span>
-                <h2 className="section-title">Awards &amp; <span className="accent">Recognition</span></h2>
-                <div className="section-divider" />
-            </div>
+            <SectionHeader label="// 05. achievements" title="Awards &" accent="Recognition" />
 
             <div className="awards-grid">
                 {achievements.map((a, i) => (

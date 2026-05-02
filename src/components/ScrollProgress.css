@@ -1,0 +1,21 @@
+.scroll-progress-track {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: rgba(255,255,255,0.04);
+    z-index: 9999;
+    pointer-events: none;
+}
+.scroll-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #7C5CFC, #00D4FF, #FF4ECD);
+    background-size: 200% 100%;
+    animation: shimmer-bar 3s linear infinite;
+    transition: width 0.05s linear;
+    box-shadow: 0 0 10px rgba(124,92,252,0.6);
+}
+@keyframes shimmer-bar {
+    0%   { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}

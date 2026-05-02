@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resume';
 import Section from './Section';
+import SectionHeader from './SectionHeader';
 import './Experience.css';
 
 const Experience = () => {
@@ -9,11 +10,7 @@ const Experience = () => {
 
     return (
         <Section id="experience">
-            <div className="section-header">
-                <span className="section-label">// 02. experience</span>
-                <h2 className="section-title">Where I've <span className="accent">Worked</span></h2>
-                <div className="section-divider" />
-            </div>
+            <SectionHeader label="// 02. experience" title="Where I've" accent="Worked" />
 
             <div className="timeline">
                 {experience.map((exp, i) => (

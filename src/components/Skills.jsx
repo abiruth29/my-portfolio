@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from './Section';
 import { resumeData } from '../data/resume';
+import SectionHeader from './SectionHeader';
 import './Skills.css';
 
 const ICONS = {
@@ -17,11 +18,7 @@ const Skills = () => {
 
     return (
         <Section id="skills">
-            <div className="section-header">
-                <span className="section-label">// 04. skills</span>
-                <h2 className="section-title">My <span className="accent">Toolkit</span></h2>
-                <div className="section-divider" />
-            </div>
+            <SectionHeader label="// 04. skills" title="My" accent="Toolkit" />
 
             <div className="skills-grid">
                 {Object.entries(skills).map(([cat, items], i) => {

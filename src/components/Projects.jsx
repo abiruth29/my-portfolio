@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useMotionValue, animate } from 'framer-motion';
+import SectionHeader from './SectionHeader';
 import Section from './Section';
 import { resumeData } from '../data/resume';
 import './Projects.css';
@@ -254,11 +255,7 @@ const Projects = () => {
 
     return (
         <Section id="projects">
-            <div className="section-header">
-                <span className="section-label">// 03. projects</span>
-                <h2 className="section-title">Things I&apos;ve <span className="accent">Built</span></h2>
-                <div className="section-divider" />
-            </div>
+            <SectionHeader label="// 03. projects" title="Things I've" accent="Built" />
 
             {/* Film strip */}
             <div className="filmstrip-viewport">
