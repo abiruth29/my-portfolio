@@ -32,21 +32,20 @@ function App() {
                 const progress = total > 0 ? y / total : 0;
 
                 if (orb1Ref.current) {
-                    // Orb 1: drifts down-left as you scroll
                     const tx = progress * -120;
                     const ty = progress * 200;
                     orb1Ref.current.style.transform = `translate(${tx}px, ${ty}px)`;
-                    // Hue shift: purple → cyan
-                    const hue = Math.round(260 + progress * -60);
-                    orb1Ref.current.style.background = `radial-gradient(circle, hsla(${hue}, 95%, 70%, 0.12) 0%, transparent 70%)`;
+                    // Hue shift: violet → amber
+                    const hue = Math.round(265 + progress * -220);
+                    const sat = Math.round(95 - progress * 10);
+                    orb1Ref.current.style.background = `radial-gradient(circle, hsla(${hue}, ${sat}%, 65%, 0.11) 0%, transparent 70%)`;
                 }
                 if (orb2Ref.current) {
-                    // Orb 2: drifts up-right
                     const tx = progress * 100;
                     const ty = progress * -180;
                     orb2Ref.current.style.transform = `translate(${tx}px, ${ty}px)`;
-                    const hue = Math.round(190 + progress * 80);
-                    orb2Ref.current.style.background = `radial-gradient(circle, hsla(${hue}, 95%, 70%, 0.09) 0%, transparent 70%)`;
+                    const hue = Math.round(42 + progress * 20);
+                    orb2Ref.current.style.background = `radial-gradient(circle, hsla(${hue}, 95%, 60%, 0.08) 0%, transparent 70%)`;
                 }
                 ticking = false;
             });
@@ -59,6 +58,10 @@ function App() {
         <>
             <Preloader onComplete={handlePreloaderDone} />
             <CustomCursor />
+
+            {/* Film grain overlay — PeachWeb inspired */}
+            <div className="grain-overlay" aria-hidden="true" />
+
             {loaded && (
                 <>
                     <ScrollProgress />
